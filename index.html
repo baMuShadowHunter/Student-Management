@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Manager</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 255, 0.411);
+            width: 60%;
+            margin: 40px auto;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        /* inputs */
+        input {
+            padding: 6px;
+            margin: 5px;
+            border-radius: 4px;
+            border: none;
+            width: 150px;
+        }
+
+        /* button */
+        .btn {
+            margin-top: 10px;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: white;
+            color: black;
+        }
+
+        .btn:hover {
+            background-color: lightgray;
+        }
+
+        /* table */
+        table {
+            width: 100%;
+            margin-top: 15px;
+            border-collapse: collapse;
+            background-color: white;
+            color: black;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 6px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #ddd;
+        }
+
+        /* footer */
+        .footer {
+            margin-top: 10px;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="container" style="background-color: rgba(0, 0, 255, 0.89);">
+            <h1>Student Performance Manager</h1>
+
+            <div>
+                <input type="text" id="name" placeholder="Enter your name..">
+                <input type="number" id="m1" placeholder="Enter first mark..">
+                <input type="number" id="m2" placeholder="Enter second mark..">
+                <input type="number" id="m3" placeholder="Enter third mark..">
+                <input type="number" id="m4" placeholder="Enter fourth mark..">
+                <input type="number" id="m5" placeholder="Enter fifth mark..">
+            </div>
+
+            <button class="btn" onclick="addStudent()"> Add Student</button>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>M1</th>
+                        <th>M2</th>
+                        <th>M3</th>
+                        <th>M4</th>
+                        <th>M5</th>
+                        <th>Total</th>
+                        <th>Average</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+
+            <div class="footer">Designed Student Performance Manager By BaMu!</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
